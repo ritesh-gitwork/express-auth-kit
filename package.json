@@ -1,0 +1,32 @@
+{
+  "name": "express-auth-kit",
+  "version": "1.0.0",
+  "description": "Plug-and-play authentication for Express apps — signup, signin, JWT, MongoDB, Zod validation",
+  "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "keywords": [
+    "express",
+    "auth",
+    "jwt",
+    "mongodb",
+    "mongoose",
+    "zod",
+    "signup",
+    "signin"
+  ],
+  "author": "your-name",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "express": "^4.18.0 || ^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
