@@ -1,5 +1,5 @@
 {
-  "name": "express-auth-kit",
+  "name": "auth-starter",
   "version": "1.0.0",
   "description": "Plug-and-play authentication for Express apps — signup, signin, JWT, MongoDB, Zod validation",
   "type": "module",

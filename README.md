@@ -1,4 +1,4 @@
-# express-auth-kit
+# auth-starter
 
 Plug-and-play authentication for Express.js apps.  
 Ships with signup, signin, JWT protection, MongoDB/Mongoose, and Zod input validation — all in ES Modules.
@@ -27,7 +27,7 @@ Ships with signup, signin, JWT protection, MongoDB/Mongoose, and Zod input valid
 ## Installation
 
 ```bash
-npm install express-auth-kit
+npm install auth-starter
 ```
 
 Install Express and dotenv in your own project if you haven't already:
@@ -58,7 +58,7 @@ JWT_EXPIRES_IN=7d
 // app.js
 import "dotenv/config";
 import express from "express";
-import { connectDB, authRouter } from "express-auth-kit";
+import { connectDB, authRouter } from "auth-starter";
 
 const app = express();
 
@@ -198,7 +198,7 @@ Authorization: Bearer <your_token>
 Use `authMiddleware` on any route you want to lock behind authentication.
 
 ```js
-import { authMiddleware } from 'express-auth-kit';
+import { authMiddleware } from 'auth-starter';
 
 // Single route
 app.get('/dashboard', authMiddleware, (req, res) => {
@@ -231,7 +231,7 @@ After the middleware runs, `req.user` contains:
 Connects to MongoDB. Call this once before starting your server.
 
 ```js
-import { connectDB } from "express-auth-kit";
+import { connectDB } from "auth-starter";
 
 await connectDB(process.env.MONGO_URI);
 ```
@@ -297,7 +297,7 @@ my-project/
 // app.js
 import "dotenv/config";
 import express from "express";
-import { connectDB, authRouter } from "express-auth-kit";
+import { connectDB, authRouter } from "auth-starter";
 import postsRouter from "./routes/posts.js";
 
 const app = express();
@@ -314,7 +314,7 @@ app.listen(3000);
 ```js
 // routes/posts.js
 import { Router } from "express";
-import { authMiddleware } from "express-auth-kit";
+import { authMiddleware } from "auth-starter";
 
 const router = Router();
 
