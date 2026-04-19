@@ -46,7 +46,7 @@ export const signUp = async (req, res) => {
 
 export const signin = async (req, res) => {
   try {
-    const result = signinSchema.safeParse(req.body);
+    const result = signSchema.safeParse(req.body);
     if (!result.success)
       return res.status(400).json({
         success: false,
